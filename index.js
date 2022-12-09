@@ -1,6 +1,20 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
+function hasTargetSum(arr, target) {
+  // Loop through the array and compare each element to every other element
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      // If the sum of the two elements is equal to the target, return true
+      if (arr[i] + arr[j] === target && i!=j) {
+        return true;
+      }
+    }
+  }
+
+  // If no pairs add up to the target, return false
+  return false;
 }
+
+
+
 
 /* 
   Write the Big O time complexity of your function here
